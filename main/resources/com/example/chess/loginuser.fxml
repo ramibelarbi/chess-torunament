@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="695.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chess.loginuserController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff791f63" height="423.0" stroke="BLACK" strokeType="INSIDE" width="695.0" />
+      <ImageView fitHeight="75.0" fitWidth="126.0" layoutX="231.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@chessicon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnJOUER" layoutX="249.0" layoutY="270.0" mnemonicParsing="false" opacity="0.0" prefHeight="88.0" prefWidth="90.0" text="JOUER" />
+      <ImageView fitHeight="191.0" fitWidth="703.0" layoutX="-2.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bannic3a8re22.png" />
+         </image>
+      </ImageView>
+      <ToolBar prefHeight="36.0" prefWidth="695.0">
+        <items>
+          <Button fx:id="btnBack" mnemonicParsing="false" onAction="#GoToPrincipal" text="&lt;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+      <Text fill="WHITE" layoutX="357.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENUE CHESSMASTER&#10; SUR VOTRE COMPTE" wrappingWidth="621.5645751953125">
+         <font>
+            <Font name="Bookman Old Style" size="21.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="114.0" fitWidth="110.0" layoutX="557.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@depositphotos_118471224-stock-illustration-flat-ranking-icons.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnCLASSEMENT" layoutX="566.0" layoutY="273.0" mnemonicParsing="false" onAction="#voirleclassement" opacity="0.0" prefHeight="88.0" prefWidth="90.0" text="CLASSEMENT" />
+      <Text fill="#615243" layoutX="-2.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pour joueur &#10;cliquez ici" textAlignment="CENTER" wrappingWidth="271.16448974609375">
+         <font>
+            <Font name="Bookman Old Style" size="26.0" />
+         </font>
+      </Text>
+      <Text fill="#615243" layoutX="318.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pour consulter &#10;leclassement &#10;cliquez ici" textAlignment="CENTER" wrappingWidth="247.96441650390625">
+         <font>
+            <Font name="Bookman Old Style" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
