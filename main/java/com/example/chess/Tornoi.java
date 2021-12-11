@@ -34,9 +34,9 @@ public class Tornoi {
         };
         return match.getGagnant();
     }
-    public void matchpool(List<joueur> joueurs)
+    public List<Match> matchpool(List<joueur> joueurs)
     {
-        List<Match> matchs = new ArrayList<Match>();
+       List<Match> matchs = new ArrayList <Match>();
         for (int i=0; i<joueurs.size(); i++)
         {
             for (int j=i+1 ;j<joueurs.size();j++)
@@ -48,5 +48,6 @@ public class Tornoi {
             }
         }
         Collections.shuffle(matchs);
+        return matchs;
     }
 }

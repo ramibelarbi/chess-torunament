@@ -3,6 +3,7 @@ package com.example.chess;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -80,12 +81,12 @@ ObservableList<joueur> joueursList;
             Match match = new Match();
             Tornoi t = new Tornoi(joueurList);
             t.matchpool(joueurList);
-           /* for (match:t.matchpool(joueurList);)
+           for (int i=0 ; i < t.matchpool(joueurList).size() ; i++)
             {
-                t.choisirgagnant(match);
                 joueurList1 = FXCollections.observableArrayList();
-                joueurList1.add(t.choisirgagnant(match));
-            }*/
+                List<Match> match1= t.matchpool(joueurList);
+                joueurList1.add(t.choisirgagnant(match1.get(i)));
+            }
 
         } catch (Exception ex) {
             ex.printStackTrace();
