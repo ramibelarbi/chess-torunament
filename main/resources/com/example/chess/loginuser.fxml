@@ -17,7 +17,7 @@
             <Image url="@chessicon.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnJOUER" layoutX="249.0" layoutY="270.0" mnemonicParsing="false" opacity="0.0" prefHeight="88.0" prefWidth="90.0" text="JOUER" />
+      <Button fx:id="btnJOUER" layoutX="249.0" layoutY="270.0" mnemonicParsing="false" onAction="#play" opacity="0.0" prefHeight="88.0" prefWidth="90.0" text="JOUER" />
       <ImageView fitHeight="191.0" fitWidth="703.0" layoutX="-2.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bannic3a8re22.png" />

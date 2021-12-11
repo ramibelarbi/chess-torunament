@@ -44,4 +44,17 @@ public class loginuserController {
         primaryStage.show();
 
     }
+    @FXML
+    void play(ActionEvent event) throws IOException {
+        // hedha ysir mba3ed matoufa il game donc inti implements game lina
+        // w chouf
+        Stage stage = (Stage) btnBack.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        btnBack.getScene().getWindow().hide();
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Perdant.fxml")));
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+
+    }
 }

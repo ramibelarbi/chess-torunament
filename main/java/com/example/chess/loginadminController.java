@@ -73,10 +73,16 @@ public class loginadminController implements Initializable{
     ObservableList<joueur> joueursList = FXCollections.observableArrayList();
 
     @FXML
-    void handleOnAction(ActionEvent event) {
+    void voirleclassement(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btnBack.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        btnBack.getScene().getWindow().hide();
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("classement.fxml")));
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
 
     }
-
     @FXML
     void GoToPrincipal(ActionEvent event) throws IOException {
         Stage stage = (Stage) btnBack.getScene().getWindow();

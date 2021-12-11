@@ -1,25 +1,28 @@
 package com.example.chess;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.net.URL;
+import java.sql.*;
 import java.util.EventListener;
+import java.util.ResourceBundle;
 
-public class PerdantController {
+public class PerdantController{
 
     @FXML
     private TextField nom;
+    private ObservableList joueursList;
+
 
     public void delete(ActionEvent event)
     {
+        Connection conn =getConnection();
         String query1 ="Delete from tornoi where nom=?";
         try {
-            Connection conn=getConnection();
             PreparedStatement pst = conn.prepareStatement(query1);
             pst.setString(1, nom.getText());
             pst.execute();
@@ -31,6 +34,7 @@ public class PerdantController {
         Connection conn;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/users", "root", "");
+            System.out.println("succes");
             return conn;
         } catch (Exception ex) {
             System.out.println("Error: " + ex.getMessage());

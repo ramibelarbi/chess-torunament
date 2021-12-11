@@ -6,6 +6,8 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -31,7 +33,7 @@
       <Label layoutX="31.0" layoutY="305.0" text="numtel" />
       <Button fx:id="btnSupprimer" layoutX="97.0" layoutY="371.0" mnemonicParsing="false" onAction="#supprimerjoueur" prefHeight="32.0" prefWidth="85.0" text="SUPPRIMER" />
       <Button fx:id="btnModifier" layoutX="193.0" layoutY="371.0" mnemonicParsing="false" onAction="#modifierjoueur" prefHeight="32.0" prefWidth="70.0" text="MODIFIER" />
-      <Button fx:id="btnClassement" layoutX="453.0" layoutY="371.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="95.0" text="CLASSEMENT" />
+      <Button fx:id="btnClassement" layoutX="438.0" layoutY="360.0" mnemonicParsing="false" onAction="#voirleclassement" opacity="0.0" prefHeight="64.0" prefWidth="121.0" text="CLASSEMENT" />
       <TextField fx:id="Prenom" layoutX="22.0" layoutY="152.0" prefHeight="30.0" prefWidth="234.0" />
       <TextField fx:id="CIN" layoutX="22.0" layoutY="212.0" prefHeight="30.0" prefWidth="234.0" />
       <TextField fx:id="Adress" layoutX="22.0" layoutY="274.0" prefHeight="30.0" prefWidth="234.0" />
@@ -50,5 +52,10 @@
             <TableColumn fx:id="tbNumtel" prefWidth="75.0" text="numtel" />
         </columns>
       </TableView>
+       <ImageView fitHeight="71.0" fitWidth="117.0" layoutX="465.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@depositphotos_118471224-stock-illustration-flat-ranking-icons.png" />
+           </image>
+       </ImageView>
    </children>
 </AnchorPane>

@@ -42,8 +42,7 @@ public class classementController implements Initializable {
 
     @FXML
     private Button btnBack;
-
-ObservableList<joueur> joueursList;
+    ObservableList<joueur> joueursList;
 
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -68,8 +67,6 @@ ObservableList<joueur> joueursList;
         String query = "SELECT nom,prenom FROM tornoi";
         Statement st;
         ResultSet rs;
-
-        ObservableList<joueur> joueurList1 = null;
         try {
             st = conn.createStatement();
             rs = ((Statement) st).executeQuery(query);
@@ -78,22 +75,29 @@ ObservableList<joueur> joueursList;
                 books = new joueur("", rs.getString("nom"), rs.getString("prenom"), "", "");
                 joueurList.add(books);
             }
-            Match match = new Match();
-            Tornoi t = new Tornoi(joueurList);
-            t.matchpool(joueurList);
-           for (int i=0 ; i < t.matchpool(joueurList).size() ; i++)
-            {
-                joueurList1 = FXCollections.observableArrayList();
-                List<Match> match1= t.matchpool(joueurList);
-                joueurList1.add(t.choisirgagnant(match1.get(i)));
-            }
-
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        return joueurList;
+    }
+    public ObservableList<joueur> upadateJoueur() {
+        ObservableList<joueur> joueurList = getJoueurList();
+        ObservableList<joueur> joueurList1 = FXCollections.observableArrayList();
+        try {
+            Match match = new Match();
+            Tornoi t = new Tornoi(joueurList);
+            t.matchpool(joueurList);
+            for (int i = 0; i < t.matchpool(joueurList).size(); i++) {
+                List<Match> match1 = t.matchpool(joueurList);
+                joueurList1.add(t.choisirgagnant(match1.get(i)));
+            }
+            showjoueur();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return joueurList1;
     }
-    public void showjoueur(){
+        public void showjoueur(){
         ObservableList<joueur> list = getJoueurList();
         tbnom.setCellValueFactory(new PropertyValueFactory<joueur, String>("nom"));
         tbprenom.setCellValueFactory(new PropertyValueFactory<joueur, String>("prenom"));
@@ -106,6 +110,16 @@ ObservableList<joueur> joueursList;
         Stage primaryStage = new Stage();
         btnBack.getScene().getWindow().hide();
         Parent root = FXMLLoader.load(getClass().getResource("loginuser.fxml"));
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+    }
+    @FXML
+    void GoToPrincipal1(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btnBack.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        btnBack.getScene().getWindow().hide();
+        Parent root = FXMLLoader.load(getClass().getResource("loginadmin.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
