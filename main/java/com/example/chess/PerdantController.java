@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -15,6 +16,8 @@ public class PerdantController{
 
     @FXML
     private TextField nom;
+    @FXML
+    private Button valid;
     private ObservableList joueursList;
 
 
@@ -29,6 +32,7 @@ public class PerdantController{
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        valid.getScene().getWindow().hide();
     }
     public Connection getConnection() {
         Connection conn;

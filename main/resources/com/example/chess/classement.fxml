@@ -4,17 +4,13 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="565.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chess.classementController">
    <children>
-      <TableView fx:id="tbjoueur" layoutX="122.0" layoutY="36.0" prefHeight="466.0" prefWidth="450.0" style="-fx-background-color: #ADD8E6;">
-        <columns>
-          <TableColumn fx:id="tbnom" prefWidth="225.0" text="nom" />
-            <TableColumn fx:id="tbprenom" prefWidth="225.0" text="prenom" />
-        </columns>
-      </TableView>
        <ToolBar prefHeight="36.0" prefWidth="695.0">
            <items>
                <Button fx:id="btnBack" mnemonicParsing="false" onAction="#GoToPrincipal" text="&lt;">
@@ -29,5 +25,17 @@
                </Button>
            </items>
        </ToolBar>
+      <ImageView fitHeight="116.0" fitWidth="1.0" layoutX="6.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="483.0" fitWidth="695.0" layoutX="-4.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@19394.4e3bb975.5000x5000o.52f065f76553.jpeg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tbjoueur" layoutX="247.0" layoutY="35.0" prefHeight="463.0" prefWidth="447.0" style="-fx-background-color: lightblue;">
+        <columns>
+          <TableColumn fx:id="tbnom" prefWidth="225.0" text="nom" />
+          <TableColumn fx:id="tbprenom" prefWidth="225.0" text="prenom" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

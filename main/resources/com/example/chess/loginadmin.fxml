@@ -25,19 +25,19 @@
         </items>
       </ToolBar>
       <Label fx:id="wronglogin" layoutX="238.0" layoutY="362.0" prefHeight="18.0" prefWidth="4.0" />
-      <TextField fx:id="Nom" layoutX="22.0" layoutY="88.0" prefHeight="30.0" prefWidth="234.0" />
+      <TextField fx:id="Nom" layoutX="22.0" layoutY="88.0" prefHeight="30.0" prefWidth="234.0" promptText="nom" />
       <Label layoutX="36.0" layoutY="63.0" text="Nom" />
       <Label layoutX="29.0" layoutY="121.0" text="Prenom" />
-      <Label layoutX="35.0" layoutY="183.0" text="CIN" />
+      <Label layoutX="35.0" layoutY="185.0" text="CIN" />
       <Label layoutX="32.0" layoutY="248.0" text="Adress" />
       <Label layoutX="31.0" layoutY="305.0" text="numtel" />
       <Button fx:id="btnSupprimer" layoutX="97.0" layoutY="371.0" mnemonicParsing="false" onAction="#supprimerjoueur" prefHeight="32.0" prefWidth="85.0" text="SUPPRIMER" />
       <Button fx:id="btnModifier" layoutX="193.0" layoutY="371.0" mnemonicParsing="false" onAction="#modifierjoueur" prefHeight="32.0" prefWidth="70.0" text="MODIFIER" />
       <Button fx:id="btnClassement" layoutX="438.0" layoutY="360.0" mnemonicParsing="false" onAction="#voirleclassement" opacity="0.0" prefHeight="64.0" prefWidth="121.0" text="CLASSEMENT" />
-      <TextField fx:id="Prenom" layoutX="22.0" layoutY="152.0" prefHeight="30.0" prefWidth="234.0" />
-      <TextField fx:id="CIN" layoutX="22.0" layoutY="212.0" prefHeight="30.0" prefWidth="234.0" />
-      <TextField fx:id="Adress" layoutX="22.0" layoutY="274.0" prefHeight="30.0" prefWidth="234.0" />
-      <TextField fx:id="numtel" layoutX="22.0" layoutY="331.0" prefHeight="30.0" prefWidth="234.0" />
+      <TextField fx:id="Prenom" layoutX="22.0" layoutY="152.0" prefHeight="30.0" prefWidth="234.0" promptText="prenom" />
+      <TextField fx:id="CIN" layoutX="22.0" layoutY="212.0" prefHeight="30.0" prefWidth="234.0" promptText="cin" />
+      <TextField fx:id="Adress" layoutX="22.0" layoutY="274.0" prefHeight="30.0" prefWidth="234.0" promptText="adress" />
+      <TextField fx:id="numtel" layoutX="22.0" layoutY="331.0" prefHeight="30.0" prefWidth="234.0" promptText="tel" />
       <Text fill="#711817" layoutX="297.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN TORNOI D'ECHEC" wrappingWidth="364.84716796875">
          <font>
             <Font name="Bookman Old Style" size="28.0" />
