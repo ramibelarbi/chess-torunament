@@ -6,6 +6,9 @@ import java.sql.*;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import com.example.chess.Modele.Match;
+import com.example.chess.Modele.Tornoi;
+import com.example.chess.Modele.joueur;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class classementController implements Initializable {
@@ -112,6 +116,8 @@ public class classementController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("loginuser.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setTitle("                                                                                 LOGIN USERS PAGE");
+        primaryStage.getIcons().add(new Image("com/example/chess/images.png"));
     }
     @FXML
     void GoToPrincipal1(ActionEvent event) throws IOException {
@@ -122,5 +128,7 @@ public class classementController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("loginadmin.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setTitle("                                                                                 LOGIN ADMIN PAGE");
+        primaryStage.getIcons().add(new Image("com/example/chess/téléchargement (2).png"));
     }
 }

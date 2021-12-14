@@ -5,6 +5,8 @@ import java.net.URL;
 import java.sql.*;
 import java.util.Objects;
 import java.util.ResourceBundle;
+
+import com.example.chess.Modele.joueur;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,11 +16,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class loginadminController implements Initializable{
@@ -81,6 +83,8 @@ public class loginadminController implements Initializable{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("classement.fxml")));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setTitle("                                                                                 LEADERBOARD");
+        primaryStage.getIcons().add(new Image("com/example/chess/747274.png"));
 
     }
     @FXML
@@ -92,10 +96,13 @@ public class loginadminController implements Initializable{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("adminview.fxml")));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setTitle("                                                                                 LOGIN HOME PAGE");
+        primaryStage.getIcons().add(new Image("com/example/chess/téléchargement.png"));
     }
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //TDoo
         showjoueur();
+        setcellvalue();
     }
 
     public Connection getConnection() {
@@ -209,6 +216,15 @@ public class loginadminController implements Initializable{
             e.printStackTrace();
         }
     }
+    private void setcellvalue(){
+       tbjoueur.setOnMouseClicked(e-> {
+            joueur sb = tbjoueur.getItems().get(tbjoueur.getSelectionModel().getSelectedIndex());
+            CIN.setText(sb.getCin());
+            Nom.setText(sb.getNom());
+            Prenom.setText(sb.getPrenom());
+            Adress.setText(sb.getAdresse());
+            numtel.setText(sb.getNumtel());
+       });}
 }
 
 

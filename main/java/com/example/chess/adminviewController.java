@@ -1,14 +1,15 @@
 package com.example.chess;
 
+import com.example.chess.Modele.joueur;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -23,6 +24,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 
 import javafx.scene.control.Hyperlink;
+
+
 
 public class adminviewController{
 	@FXML
@@ -42,8 +45,6 @@ public class adminviewController{
 	ResultSet rs;
 	ObservableList<joueur> joueursList;
 
-
-
 	// Event Listener on Button[#btnLogIn].onAction
 	public void login(ActionEvent event) throws IOException {
 		Stage primaryStage = new Stage();
@@ -53,6 +54,8 @@ public class adminviewController{
 			Scene scene= new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			primaryStage.setTitle("                                                                                 LOGIN ADMIN PAGE");
+			primaryStage.getIcons().add(new Image("com/example/chess/téléchargement (2).png"));
 
         }
 		else if (userid.getText().isEmpty() && password.getText().isEmpty()) {
@@ -74,6 +77,8 @@ public class adminviewController{
 					Scene scene= new Scene(root);
 					primaryStage.setScene(scene);
 					primaryStage.show();
+					primaryStage.setTitle("                                                                                 LOGIN USERS PAGE");
+					primaryStage.getIcons().add(new Image("com/example/chess/images.png"));
 				}
 				else
 				{

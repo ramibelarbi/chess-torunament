@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="695.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chess.Conrollers.loginadminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="695.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chess.loginadminController">
    <children>
       <Button fx:id="btnInsert" layoutX="20.0" layoutY="371.0" mnemonicParsing="false" onAction="#ajouterjoueur" prefHeight="32.0" prefWidth="69.0" text="INSERT" />
       <ToolBar prefHeight="36.0" prefWidth="695.0">

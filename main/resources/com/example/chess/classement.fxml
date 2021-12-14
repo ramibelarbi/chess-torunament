@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="565.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chess.Conrollers.classementController">
+<AnchorPane prefHeight="500.0" prefWidth="565.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chess.classementController">
    <children>
        <ToolBar prefHeight="36.0" prefWidth="695.0">
            <items>

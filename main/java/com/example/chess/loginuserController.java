@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class loginuserController {
@@ -31,6 +32,8 @@ public class loginuserController {
         Parent root = FXMLLoader.load(getClass().getResource("adminview.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setTitle("                                                                                 LOGIN HOME PAGE");
+        primaryStage.getIcons().add(new Image("com/example/chess/téléchargement.png"));
 
     }
     @FXML
@@ -42,6 +45,8 @@ public class loginuserController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("classement.fxml")));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setTitle("                                                                                 LEADERBOARD");
+        primaryStage.getIcons().add(new Image("com/example/chess/747274.png"));
 
     }
     @FXML
@@ -55,6 +60,8 @@ public class loginuserController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Perdant.fxml")));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setTitle("                                                                             YOU LOSE SADLY");
+        primaryStage.getIcons().add(new Image("com/example/chess/téléchargement (3).png"));
 
     }
 }
